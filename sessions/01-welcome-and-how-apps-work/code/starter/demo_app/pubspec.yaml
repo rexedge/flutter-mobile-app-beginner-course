@@ -1,0 +1,21 @@
+name: demo_app
+description: "Session 1 demo project — Flutter for Beginners, Module 0."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.12.0 <4.0.0'    # Dart 3.12 — pinned per course tech baseline
+  flutter: '>=3.44.0'       # Flutter 3.44.x stable — pinned per course tech baseline
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
