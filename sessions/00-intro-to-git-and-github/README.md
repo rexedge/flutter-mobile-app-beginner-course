@@ -62,12 +62,12 @@ Git does that job properly. It watches one folder, records every change as a num
 
 This trips up almost everyone at first, so let's be precise:
 
-| | Git | GitHub |
-|---|---|---|
-| What it is | A program on your computer | A website |
-| Made by | The open-source community | A company (owned by Microsoft) |
-| Needs internet? | No | Yes |
-| What it does | Tracks changes to your files | Stores repositories online so they can be shared |
+|                 | Git                          | GitHub                                           |
+| --------------- | ---------------------------- | ------------------------------------------------ |
+| What it is      | A program on your computer   | A website                                        |
+| Made by         | The open-source community    | A company (owned by Microsoft)                   |
+| Needs internet? | No                           | Yes                                              |
+| What it does    | Tracks changes to your files | Stores repositories online so they can be shared |
 
 > **Git is the camera. GitHub is the photo-sharing site.** You can own a camera and never upload anything. The camera works fine alone. GitHub is just where the pictures go when you want other people to see them.
 
@@ -130,7 +130,7 @@ cd Desktop
 Then clone:
 
 ```
-git clone https://github.com/<your-org>/flutter-for-beginners.git
+git clone https://github.com/rexedge/flutter-mobile-app-beginner-course.git
 ```
 
 > **Replace `<your-org>` with the real address** you were given for this course. If you don't have it, ask before going further — everything below depends on it.
@@ -267,7 +267,7 @@ nothing to commit, working tree clean
 
 **"Working tree clean"** means your copy exactly matches the course repo. `git pull` will now work perfectly.
 
-To undo *all* your accidental edits at once, from the top of the course folder:
+To undo _all_ your accidental edits at once, from the top of the course folder:
 
 ```
 git restore .
@@ -298,6 +298,7 @@ Do all four of these now, in order. It's about five minutes and it's the entire 
 **If `git pull` reports a conflict or refuses to run**, you have edited something. Run `git status` to see which file, then `git restore <that file>`.
 
 **If `git clone` says "repository not found"**, check the URL — most often the `<your-org>` part was never replaced with the real address.
+
 </details>
 
 ---
@@ -306,7 +307,7 @@ Do all four of these now, in order. It's about five minutes and it's the entire 
 
 **You do not need this to take the course.** Skip it if you'd rather get to Session 1 — you can come back any time.
 
-Once you've built a few sessions' worth of practice code, you may want a history of your own work, or a backup that isn't only on your laptop. That's your *own* repository, completely separate from the course one.
+Once you've built a few sessions' worth of practice code, you may want a history of your own work, or a backup that isn't only on your laptop. That's your _own_ repository, completely separate from the course one.
 
 Inside your own work folder:
 
@@ -317,10 +318,10 @@ git add .
 git commit -m "My Flutter course work so far"
 ```
 
-| Command | What it does |
-|---|---|
-| `git init` | Start tracking this folder with Git. Run once, ever |
-| `git add .` | Stage everything that's changed, ready to be saved |
+| Command                   | What it does                                         |
+| ------------------------- | ---------------------------------------------------- |
+| `git init`                | Start tracking this folder with Git. Run once, ever  |
+| `git add .`               | Stage everything that's changed, ready to be saved   |
 | `git commit -m "message"` | Save a snapshot, with a note describing what you did |
 
 > **Commit** — one saved snapshot of your work, with a message explaining it.
@@ -343,46 +344,46 @@ To put it online, create a free account at [github.com](https://github.com), mak
 
 ## Cheat sheet
 
-| Command | What it does |
-|---|---|
-| `git --version` | Confirms Git is installed |
-| `git clone <url>` | Downloads a full copy of a repository. Run once per repo |
-| `git pull` | Fetches and applies whatever changed online. Run before each session |
-| `git status` | Shows what has changed in your copy. **Run this whenever you're confused** |
-| `git restore <file>` | Throws away your local changes to that file |
-| `git restore .` | Throws away all local changes in the current folder and below |
+| Command              | What it does                                                               |
+| -------------------- | -------------------------------------------------------------------------- |
+| `git --version`      | Confirms Git is installed                                                  |
+| `git clone <url>`    | Downloads a full copy of a repository. Run once per repo                   |
+| `git pull`           | Fetches and applies whatever changed online. Run before each session       |
+| `git status`         | Shows what has changed in your copy. **Run this whenever you're confused** |
+| `git restore <file>` | Throws away your local changes to that file                                |
+| `git restore .`      | Throws away all local changes in the current folder and below              |
 
 **Optional, for your own work only:**
 
-| Command | What it does |
-|---|---|
-| `git init` | Starts tracking a folder with Git. Once per project |
-| `git add .` | Stages all changes, ready to save |
-| `git commit -m "note"` | Saves a snapshot with a description |
+| Command                | What it does                                        |
+| ---------------------- | --------------------------------------------------- |
+| `git init`             | Starts tracking a folder with Git. Once per project |
+| `git add .`            | Stages all changes, ready to save                   |
+| `git commit -m "note"` | Saves a snapshot with a description                 |
 
 **Vocabulary:**
 
-| Term | Plain-English definition |
-|---|---|
-| Repository (repo) | One project's folder, plus its full history of changes |
-| Clone | Download a complete copy of a repository |
-| Pull | Fetch and apply whatever changed online |
-| Commit | One saved snapshot of your work, with a message |
-| Conflict | Git found two different versions of the same file and needs you to decide |
-| Working tree clean | Your copy exactly matches the repository. Nothing edited |
+| Term               | Plain-English definition                                                  |
+| ------------------ | ------------------------------------------------------------------------- |
+| Repository (repo)  | One project's folder, plus its full history of changes                    |
+| Clone              | Download a complete copy of a repository                                  |
+| Pull               | Fetch and apply whatever changed online                                   |
+| Commit             | One saved snapshot of your work, with a message                           |
+| Conflict           | Git found two different versions of the same file and needs you to decide |
+| Working tree clean | Your copy exactly matches the repository. Nothing edited                  |
 
 ---
 
 ## When it goes wrong
 
-| What you'll see | What it actually means | The fix |
-|---|---|---|
-| `'git' is not recognized...` (Windows) or `command not found: git` (Mac) | Git isn't installed, or your terminal was opened before it finished installing | Install Git, then **close every terminal window and open a fresh one** |
-| `fatal: repository not found` | The clone URL is wrong — usually the `<your-org>` placeholder was never replaced | Check the exact address you were given for the course |
-| `fatal: not a git repository` | You're running a Git command in a folder that isn't a repo | `cd` into the course folder first. Git commands only work inside a repository |
-| `Your local changes to the following files would be overwritten by merge` | You edited a course file, and that same file changed online | `git status` to see which file, then `git restore <file>`, then `git pull` again |
-| `Please tell me who you are` (when committing) | Git wants a name and email before it records a snapshot | Run `git config --global user.name "Your Name"` and `git config --global user.email "you@example.com"`, then commit again |
-| `git pull` succeeded but you don't see the new session | You're looking at an old window or an old folder | Refresh VS Code's file explorer, and confirm you're inside the course folder, not your work folder |
+| What you'll see                                                           | What it actually means                                                           | The fix                                                                                                                   |
+| ------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `'git' is not recognized...` (Windows) or `command not found: git` (Mac)  | Git isn't installed, or your terminal was opened before it finished installing   | Install Git, then **close every terminal window and open a fresh one**                                                    |
+| `fatal: repository not found`                                             | The clone URL is wrong — usually the `<your-org>` placeholder was never replaced | Check the exact address you were given for the course                                                                     |
+| `fatal: not a git repository`                                             | You're running a Git command in a folder that isn't a repo                       | `cd` into the course folder first. Git commands only work inside a repository                                             |
+| `Your local changes to the following files would be overwritten by merge` | You edited a course file, and that same file changed online                      | `git status` to see which file, then `git restore <file>`, then `git pull` again                                          |
+| `Please tell me who you are` (when committing)                            | Git wants a name and email before it records a snapshot                          | Run `git config --global user.name "Your Name"` and `git config --global user.email "you@example.com"`, then commit again |
+| `git pull` succeeded but you don't see the new session                    | You're looking at an old window or an old folder                                 | Refresh VS Code's file explorer, and confirm you're inside the course folder, not your work folder                        |
 
 ---
 
@@ -458,7 +459,7 @@ All of them, plus every term from every other session, live in the [course gloss
 
 **[Session 1 — Welcome: How Mobile Apps Actually Work](../01-welcome-and-how-apps-work/)**
 
-You have the course files. Now the actual course starts — with no code at all, and one question: what *is* an app?
+You have the course files. Now the actual course starts — with no code at all, and one question: what _is_ an app?
 
 ---
 
