@@ -133,12 +133,10 @@ Then clone:
 git clone https://github.com/rexedge/flutter-mobile-app-beginner-course.git
 ```
 
-> **Replace `<your-org>` with the real address** you were given for this course. If you don't have it, ask before going further — everything below depends on it.
-
 You'll see something like:
 
 ```
-Cloning into 'flutter-for-beginners'...
+Cloning into 'flutter-mobile-app-beginner-course'...
 remote: Enumerating objects: 428, done.
 Receiving objects: 100% (428/428), 1.21 MiB | 3.40 MiB/s, done.
 ```
@@ -146,7 +144,7 @@ Receiving objects: 100% (428/428), 1.21 MiB | 3.40 MiB/s, done.
 Now move into it:
 
 ```
-cd flutter-for-beginners
+cd flutter-mobile-app-beginner-course
 ```
 
 Run `ls` (Mac) or `dir` (Windows) and you should see `README.md`, `START-HERE.md`, `glossary.md`, and a `sessions` folder.
@@ -201,7 +199,7 @@ Here's why it matters: if you edit a course file, and that same file later chang
 Say you're starting Session 4:
 
 ```
-cp -r flutter-for-beginners/sessions/04-variables-types-null-safety/code/starter/dart_practice ~/my-flutter-work/session-04
+cp -r flutter-mobile-app-beginner-course/sessions/04-variables-types-null-safety/code/starter/dart_practice ~/my-flutter-work/session-04
 cd ~/my-flutter-work/session-04
 ```
 
@@ -213,7 +211,7 @@ Now you have your own copy to break, experiment with, and mess up freely. The co
 
 ```
 Desktop/
-├── flutter-for-beginners/     ← the course. Read only. Pull updates here.
+├── flutter-mobile-app-beginner-course/     ← the course. Read only. Pull updates here.
 └── my-flutter-work/           ← yours. Break things here.
     ├── session-04/
     └── session-05/
@@ -291,13 +289,13 @@ Do all four of these now, in order. It's about five minutes and it's the entire 
 <details>
 <summary><strong>You're done when</strong></summary>
 
-- You have a folder called `flutter-for-beginners` on your computer containing `sessions/`, `glossary.md`, and `START-HERE.md`
+- You have a folder called `flutter-mobile-app-beginner-course` on your computer containing `sessions/`, `glossary.md`, and `START-HERE.md`
 - `git pull` inside that folder reports **"Already up to date"** rather than an error
 - `git status` inside that folder reports **"working tree clean"**
 
 **If `git pull` reports a conflict or refuses to run**, you have edited something. Run `git status` to see which file, then `git restore <that file>`.
 
-**If `git clone` says "repository not found"**, check the URL — most often the `<your-org>` part was never replaced with the real address.
+**If `git clone` says "repository not found"**, check the URL character by character — a single wrong letter in the address is the usual cause.
 
 </details>
 
@@ -379,7 +377,7 @@ To put it online, create a free account at [github.com](https://github.com), mak
 | What you'll see                                                           | What it actually means                                                           | The fix                                                                                                                   |
 | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | `'git' is not recognized...` (Windows) or `command not found: git` (Mac)  | Git isn't installed, or your terminal was opened before it finished installing   | Install Git, then **close every terminal window and open a fresh one**                                                    |
-| `fatal: repository not found`                                             | The clone URL is wrong — usually the `<your-org>` placeholder was never replaced | Check the exact address you were given for the course                                                                     |
+| `fatal: repository not found`                                             | The clone URL has a typo in it, or you're offline | Check the address character by character, and confirm you have an internet connection                                                                     |
 | `fatal: not a git repository`                                             | You're running a Git command in a folder that isn't a repo                       | `cd` into the course folder first. Git commands only work inside a repository                                             |
 | `Your local changes to the following files would be overwritten by merge` | You edited a course file, and that same file changed online                      | `git status` to see which file, then `git restore <file>`, then `git pull` again                                          |
 | `Please tell me who you are` (when committing)                            | Git wants a name and email before it records a snapshot                          | Run `git config --global user.name "Your Name"` and `git config --global user.email "you@example.com"`, then commit again |

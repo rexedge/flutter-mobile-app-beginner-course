@@ -21,8 +21,8 @@ The read-through stands on its own. If you missed a live session, or watched it 
 **[Session 0 — Intro to Git and GitHub](sessions/00-intro-to-git-and-github/) covers this properly**, in about 15 minutes. Read it before Session 1. The short version:
 
 ```
-git clone https://github.com/<your-org>/flutter-for-beginners.git
-cd flutter-for-beginners
+git clone https://github.com/rexedge/flutter-mobile-app-beginner-course.git
+cd flutter-mobile-app-beginner-course
 ```
 
 That downloads a copy of everything. Later, to get new sessions and fixes:
@@ -46,7 +46,7 @@ This repository is read-only for you. If you change files here and then run `git
 Say you're on Session 11. Do this:
 
 ```
-cp -r flutter-for-beginners/sessions/11-text-image-icon-container/code/starter/widget_basics ~/my-flutter-work/session-11
+cp -r flutter-mobile-app-beginner-course/sessions/11-text-image-icon-container/code/starter/widget_basics ~/my-flutter-work/session-11
 cd ~/my-flutter-work/session-11
 ```
 

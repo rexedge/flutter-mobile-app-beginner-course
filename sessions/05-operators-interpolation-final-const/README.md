@@ -495,7 +495,7 @@ All of them, plus every term from every other session, live in the [course gloss
 
 ## Next up
 
-**Session 6 — Control Flow: if/else, switch, loops**
+**[Session 6 — Control Flow: if/else, switch, loops](../06-control-flow/)**
 
 Next session is where today's comparison and logical operators finally get to *do* something: make real decisions. `if`, `else`, `switch`, and loops that repeat work for you instead of you typing it five times.
 
@@ -503,4 +503,4 @@ You've seen a tiny preview of `if` twice now. Session 6 is the real thing, in fu
 
 ---
 
-[← Session 4](../04-variables-types-null-safety/) · [Course home](../../README.md) · [Glossary](../../glossary.md)
+[← Session 4](../04-variables-types-null-safety/) · [Course home](../../README.md) · [Glossary](../../glossary.md) · [Session 6 →](../06-control-flow/)

@@ -1,0 +1,10 @@
+name: dart_practice
+description: "Session 6 Dart practice project — plain Dart, no Flutter."
+version: 1.0.0
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.12.0 <4.0.0'
+
+dev_dependencies:
+  lints: ^5.0.0

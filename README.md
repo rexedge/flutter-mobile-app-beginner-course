@@ -32,7 +32,7 @@ You end this course having built eight working mini-apps and one real, installab
 |---|---|---|
 | 4 | **[Variables, Data Types, Null Safety](sessions/04-variables-types-null-safety/)** | Your first real Dart: variables, the four core types, and null safety |
 | 5 | **[Operators, String Interpolation, `final` vs `const`](sessions/05-operators-interpolation-final-const/)** | Real maths and comparisons, readable sentences, and locking values down |
-| 6 | Control Flow: if/else, switch, loops | *read-through coming soon* |
+| 6 | **[Control Flow: if/else, switch, loops](sessions/06-control-flow/)** | Decisions with if/switch, repetition with for/while, and escaping infinite loops |
 | 7 | Functions, Parameters, Arrow Syntax | *read-through coming soon* |
 | 8 | Collections: List, Set, Map | *read-through coming soon* |
 | 9 | OOP — **Mini-app: Quiz Engine** | *read-through coming soon* |
