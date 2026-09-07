@@ -565,8 +565,9 @@ int square(int x) { return x * x; }
 | `Too many positional arguments: 1 allowed, but 2 found.` | You passed more arguments than the definition accepts | Remove the extra one, or check you meant a different function |
 | `The named parameter 'name' is required, but there's no corresponding argument.` | You skipped a named parameter marked `required` | Add `name: value` to the call |
 | `The argument type 'String' can't be assigned to the parameter type 'int'.` | The value you passed doesn't match the parameter's declared type | Check the parameter's type in the definition and pass a matching value |
+| `This expression has a type of 'void' so its value can't be used.` | You tried to store or print the result of a `void` function, which doesn't produce one | Either call it on its own line, or change the function to return a real type |
 | `The body might complete normally, causing 'null' to be returned, but the return type is a potentially non-nullable type.` | A value-returning function has a path through it that never hits a `return` | Add a final `else` so every path returns — same idea as Session 6's "must be assigned" error |
-| `Closure: (int) => int` printed instead of a number | You wrote `print(square)` instead of `print(square(5))` — that refers to the function itself rather than calling it | Add the parentheses and the argument. A function only runs when you call it |
+| `Closure: (int) => int from Function 'square': static.` printed instead of a number | You wrote `print(square)` instead of `print(square(5))` — that refers to the function itself rather than calling it | Add the parentheses and the argument. A function only runs when you call it |
 | `Dead code` warning on a line inside a function | That line sits after a `return` in the same block, so it can never run | Move it above the `return`, or delete it |
 | No error, but the result is wrong | Positional arguments passed in the wrong order — `subtract(3, 10)` instead of `subtract(10, 3)` | Check the definition's parameter order, or switch to named parameters so order stops mattering |
 
