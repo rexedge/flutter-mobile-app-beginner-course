@@ -585,4 +585,4 @@ Next session you learn to package logic into **functions** — named, reusable b
 
 ---
 
-[← Session 5](../05-operators-interpolation-final-const/) · [Course home](../../README.md) · [Glossary](../../glossary.md)
+[← Session 5](../05-operators-interpolation-final-const/) · [Course home](../../README.md) · [Glossary](../../glossary.md) · [Session 7 →](../07-functions-parameters-arrow-syntax/)
