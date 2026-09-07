@@ -79,9 +79,11 @@ Terms are listed in the order they're introduced, not alphabetically — so read
 | Argument | The actual value handed over when calling a function | Session 7 |
 | Return type / `return` | The type of value a function promises to hand back; `return` sends that value to the caller | Session 7 |
 | `void` | A return type meaning a function performs an action but hands nothing back | Session 7 |
+| Positional parameter | A parameter matched purely by its order in the argument list, and always required | Session 7 |
 | Optional named parameter | A parameter wrapped in `{}`, called by name, with a default value if omitted | Session 7 |
 | Required named parameter (`required`) | A named parameter with no default — callers must supply it, but still by name | Session 7 |
 | Arrow syntax (`=>`) | Shorthand for a function whose entire body is one expression being returned | Session 7 |
+| Refactor | Reorganising existing code without changing what it does | Session 7 |
 | Collection | A type built to hold multiple values inside one variable | Session 8 |
 | `List` | An ordered, indexed collection of values | Session 8 |
 | Index | A value's numbered position within a List, starting at 0 | Session 8 |
