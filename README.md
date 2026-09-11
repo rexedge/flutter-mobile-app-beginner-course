@@ -65,6 +65,7 @@ You end this course having built eight working mini-apps and one real, installab
 ## Also in here
 
 - **[Glossary](glossary.md)** — every technical term in the course, in plain English, tagged with the session it first appears in. When a word stops you, look here first.
+- **[Coursework](coursework/)** — practice exercises with worked solutions, and assessments. Do each session's set right after reading its chapter.
 - **`sessions/NN-name/code/starter/`** — where you begin building for that session
 - **`sessions/NN-name/code/final/`** — the finished version, for when you get stuck or want to compare
 
