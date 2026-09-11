@@ -34,8 +34,8 @@ You end this course having built eight working mini-apps and one real, installab
 | 5 | **[Operators, String Interpolation, `final` vs `const`](sessions/05-operators-interpolation-final-const/)** | Real maths and comparisons, readable sentences, and locking values down |
 | 6 | **[Control Flow: if/else, switch, loops](sessions/06-control-flow/)** | Decisions with if/switch, repetition with for/while, and escaping infinite loops |
 | 7 | **[Functions, Parameters, Arrow Syntax](sessions/07-functions-parameters-arrow-syntax/)** | Packaging logic into named, reusable functions with typed parameters |
-| 8 | Collections: List, Set, Map | *read-through coming soon* |
-| 9 | OOP — **Mini-app: Quiz Engine** | *read-through coming soon* |
+| 8 | **[Collections: List, Set, Map](sessions/08-collections/)** | Holding many values at once, and looping over all of them in one pass |
+| 9 | **[OOP — Mini-app: Quiz Engine](sessions/09-oop-quiz-engine/)** | Classes, inheritance and mixins — and your first real, interactive app |
 
 ### Module 2 — Widgets & Layout
 

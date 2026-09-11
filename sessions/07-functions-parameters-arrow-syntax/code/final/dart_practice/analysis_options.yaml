@@ -1,1 +1,8 @@
 include: package:lints/recommended.yaml
+
+linter:
+  rules:
+    # Session 4 writes `String? middleName = null;` on purpose: seeing null
+    # assigned explicitly is the point of the null-safety lesson. The lint
+    # is right in general and worth following in your own code later.
+    avoid_init_to_null: false

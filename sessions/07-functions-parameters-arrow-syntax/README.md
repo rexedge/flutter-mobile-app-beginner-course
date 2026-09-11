@@ -662,4 +662,4 @@ That's also the exact shape the Quiz Engine needs, two sessions from now: a ques
 
 ---
 
-[← Session 6](../06-control-flow/) · [Course home](../../README.md) · [Glossary](../../glossary.md)
+[← Session 6](../06-control-flow/) · [Course home](../../README.md) · [Glossary](../../glossary.md) · [Session 8 →](../08-collections/)

@@ -87,11 +87,15 @@ Terms are listed in the order they're introduced, not alphabetically — so read
 | Collection | A type built to hold multiple values inside one variable | Session 8 |
 | `List` | An ordered, indexed collection of values | Session 8 |
 | Index | A value's numbered position within a List, starting at 0 | Session 8 |
+| Zero-indexed | Counting positions from 0, so the last valid index is always `length - 1` | Session 8 |
+| `for`-`in` loop | A loop that hands you each item of a collection in turn, with no counter to manage | Session 8 |
 | `Set` | A collection that automatically keeps only unique values, dropping duplicates | Session 8 |
 | `Map` | A collection of key-value pairs, looked up by key instead of position | Session 8 |
 | Key / value (Map) | The lookup name (key) and the data stored under it (value) in a Map | Session 8 |
 | Spread operator (`...`) | Unpacks every item from one collection into another collection literal | Session 8 |
 | Collection-if | An `if` written directly inside a collection literal, conditionally including one item | Session 8 |
+| Runtime error | A failure that appears only while a program is running, because it depends on actual values rather than the shape of the code | Session 8 |
+| Off-by-one error | Miscounting by one — most often reaching past the end of a list, since the last index is `length - 1` | Session 8 |
 | Class | A blueprint that describes what an object is made of (fields) and what it can do (methods) | Session 9 |
 | Object / instance | One real, actual thing built from a class's blueprint | Session 9 |
 | Field | A variable that lives inside a class, storing one piece of data for each object | Session 9 |
@@ -103,6 +107,7 @@ Terms are listed in the order they're introduced, not alphabetically — so read
 | `super` | Inside a subclass's constructor, calls the superclass's constructor to build the inherited part of the object | Session 9 |
 | `@override` | Marks that a method or getter is intentionally replacing one required by a superclass or mixin | Session 9 |
 | Mixin / `with` | A mixin is a bundle of reusable behavior; `with` bolts that behavior onto a class regardless of what it already extends | Session 9 |
+| Getter | A method declared with `get` that is used like a field, without parentheses | Session 9 |
 | Widget (full formal definition) | A piece of your app's screen, described in code, that knows how to draw itself — includes invisible spacing, not just visible controls | Session 10 (full lesson; previewed Session 1, S3) |
 | Widget tree | The nested structure formed when widgets contain other widgets, like a family tree | Session 10 (full lesson; previewed Session 3) |
 | `StatelessWidget` | A widget class that draws itself once and doesn't remember or change anything on its own; StatefulWidget (Session 16) can | Session 10 |

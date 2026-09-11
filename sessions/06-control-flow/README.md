@@ -128,10 +128,29 @@ Three pieces:
 | Keyword | What it does |
 |---|---|
 | `case` | One exact possible value to match against |
-| `break` | Stop checking further cases the moment a match is found |
+| `break` | Ends the switch. In Dart 3 it's optional — see below |
 | `default` | Catches anything that matched no listed case — the same job `else` does for `if` |
 
-**Don't forget `break`.** Leave it out and execution can "fall through" into the next case, which is almost never what you want.
+**About `break`.** You'll see `break` at the end of every `case` in most Dart code, and in nearly every code example on the internet. It's worth knowing what it's actually doing here.
+
+In C, Java and JavaScript, leaving `break` out makes execution "fall through" and run the *next* case's code too — a famous source of bugs. **Dart 3 does not do that.** A matched case runs its body and the switch ends, `break` or no `break`. Leave it out and Dart won't even warn you, because nothing is wrong.
+
+So why write it? Habit, consistency with other languages, and the fact that most Dart code you'll read already has it. Keep writing it — this chapter does — just don't expect disaster when you forget one.
+
+One thing that *does* still group cases is leaving a case completely **empty**:
+
+```dart
+switch (day) {
+  case 'Sat':
+  case 'Sun':
+    print('Weekend');
+    break;
+  default:
+    print('Weekday');
+}
+```
+
+`'Sat'` has no body at all, so it shares `'Sun'`'s. That's deliberate, and it's the normal way to say "either of these".
 
 ### Choosing between them
 
@@ -449,7 +468,7 @@ switch (value) {
 }
 ```
 
-Use for one value checked against a specific, exact list of options. Don't forget `break`.
+Use for one value checked against a specific, exact list of options. `break` ends the switch — optional in Dart 3, but conventional.
 
 **for loop:**
 
@@ -495,8 +514,8 @@ Same as `while`, except the body always runs at least once before the condition 
 |---|---|---|
 | Your program runs forever, printing the same thing over and over | An infinite loop — the condition never becomes false | <kbd>Ctrl</kbd>+<kbd>C</kbd> to stop it, then find what should change inside the loop and make sure it actually does |
 | The wrong branch fires, but there's no error at all | Your `if` conditions are in the wrong order, and an earlier, broader one is catching the value first | Reorder from most specific to least specific. `>= 90` before `>= 80` before `>= 70` |
-| `A value of type 'String' can't be assigned to a variable of type 'int'` inside a switch | A `case` value isn't the same type as the thing being switched on | Make every `case` value match the type of the variable in `switch (...)` |
-| More than one case's code runs when you expected only one | Missing `break` — execution fell through into the next case | Add `break;` at the end of each case block |
+| `The matched value type 'int' can never be equal to this constant of type 'String'.` — a warning, not an error | A `case` value isn't the same type as the thing being switched on, so it can never match | Make every `case` value match the type of the variable in `switch (...)` |
+| You forgot a `break` and expected trouble, but nothing happened | Dart 3 doesn't fall through — a matched case ends on its own | Nothing to fix. `break` is optional here, unlike in C, Java or JavaScript |
 | `The non-nullable local variable 'grade' must be assigned before it can be used` | You declared a variable with no value, and Dart found a path where nothing assigns it | Add a final `else` so every possible path assigns a value — or give the variable a starting value when you declare it |
 
 ---

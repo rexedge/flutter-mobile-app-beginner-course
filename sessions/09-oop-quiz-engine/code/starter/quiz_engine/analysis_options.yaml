@@ -1,0 +1,9 @@
+include: package:lints/recommended.yaml
+
+linter:
+  rules:
+    # This session teaches `: super(text, correctAnswer)` explicitly, because
+    # seeing values handed up to the superclass is the whole point of the
+    # lesson (and of the break-it drill). Dart's shorter `super.text` form is
+    # the modern style and worth adopting once the idea has landed.
+    use_super_parameters: false
